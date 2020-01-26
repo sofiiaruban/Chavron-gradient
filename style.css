@@ -57,7 +57,8 @@ nav {
 	position: absolute;
 	top: 308px;
 	font-size: 0;
-	border: 2px solid #000000;
+	border: 2px solid transparent;
+	border-right: none;
 	font-family: Helvetica;
 	font-style: normal;
 	font-weight: normal;
@@ -99,9 +100,7 @@ div.nav-item::after {
     z-index: 5;
 }
 div.first-black::after {
-	border-color: transparent transparent transparent #000000;
-	top:-60px;
-	right: -75px;
+	display: none;
 }
 div.first-black::before {
 	display: none;
@@ -109,18 +108,18 @@ div.first-black::before {
 div.second-grey {
 	background: #CCCCCC;
 }
+div.second-grey:hover {
+	opacity: 0.7;
+}
 div.second-grey::before {
-    border-color: transparent transparent transparent #000000;
+    border-color:#CCCCCC #CCCCCC #CCCCCC transparent;
 }
 div.second-grey::after {
     border-color: transparent transparent transparent #CCCCCC;
 }
-div.third-white {
+div.white-tap {
 	background: #FFFFFF;
 }
-div.fourth-white {
-	background: #FFFFFF;
-}
-div.fifth-white {
-	background: #FFFFFF;
+div.white-tap:hover {
+	opacity: 0.7;
 }
